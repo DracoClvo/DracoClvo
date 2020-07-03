@@ -4,30 +4,39 @@
 	color: white;
 }
 body{
-	display: inline-flex;
-	width: 100%;
 	background-color: #7C7C7C;
+	display: grid;
+	grid-template-columns: 15% 70% 15%;
+	grid-template-rows: 10% 80% 10%;
+	position: absolute;
+	bottom: 0;
+	top: 0;
+	left: 0;
+	right: 0;
 }
 a{
 	text-decoration: none;
 }
 .full_with{
-	background-color: #474747;
 	width: 100%;
 }
+.gris_obscuro{
+	background-color: #474747;
+}
 .header{
-	display: inline-flex;
-	align-items: center;
-	justify-content: space-between;
-	color: white;
-	position: fixed;
-}
-.header_title{
-	
-}
-.header__menu{
+	grid-column-start: 1;
+	grid-column-end: 4;
 
 }
+.header__container{
+
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	height: 100%;
+	width: 100%;
+}
+
 .header__menu ul{
 	display: inline-flex;
 	list-style: none;
@@ -36,18 +45,17 @@ a{
 }
 .header__menu ul li{
 	padding: 20px 5px;
+	cursor: pointer;
 }
 .header__menu ul li:hover{
 	background-color: #7C7C7C;
 }
 
 .portfolio{
-	width: 100%;
+	grid-column-start: 2;
+	grid-column-end: 3;
 	display: flex;
-	padding-top: 5%;
-	flex-direction: row;
-	flex-wrap: wrap;
-
+	flex-flow: row wrap;
 }
 .portfolio__proyecto{
 	height: 200px;
@@ -66,7 +74,7 @@ a{
 	border-radius: 8%;
 }
 .portfolio__proyecto--dtails{
-	border-radius: 8%;
+	border-radius: 0% 0% 8% 8%;
 	background-color:#CECECE; 
 	transition: 450ms opacity;
 	width: 90%;
@@ -93,12 +101,21 @@ a{
 	opacity: 1;
 }
 .footer{
-	position: fixed;
-	bottom: 0;
+	grid-column-start: 1;
+	grid-column-end: 4;
+	grid-row-start: 3;
+	grid-row-end: 4;
 }
-.footer_sosialMedia{
+.footer__container{
 	display: flex;
-	justify-content: column;
+	align-items: center;
+	justify-content: space-around;
+	height: 100%;
+	width: 100%;
+
+}
+.footer__container--sosialMedia{
+
 }
 
 /*#474747*/
